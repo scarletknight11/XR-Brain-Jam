@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.xrbrainjamteam7.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\ALIENWARE EDU\\Documents\\GitHub\\XR-Brain-Jam\\XRBrainJam-Team7\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "XRBrainJam-Team7 [Testing]"
+        }
+      }
+    }
+  ]
+}
