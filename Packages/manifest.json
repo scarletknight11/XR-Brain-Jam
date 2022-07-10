@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.tobii.xr.sdk": "file:C:/Users/PaulD/Desktop/Vive sdk",
+    "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.4.2.tgz",
     "com.unity.collab-proxy": "1.15.18",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.test-framework": "1.1.31",
@@ -40,7 +40,6 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.4.2.tgz"
+    "com.unity.modules.xr": "1.0.0"
   }
 }

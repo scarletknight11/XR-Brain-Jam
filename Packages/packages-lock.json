@@ -10,14 +10,6 @@
         "com.unity.xr.openxr": "1.4.2"
       }
     },
-    "com.tobii.xr.sdk": {
-      "version": "file:C:/Users/PaulD/Desktop/Vive sdk",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.unity.xr.management": "3.2.16"
-      }
-    },
     "com.unity.collab-proxy": {
       "version": "1.15.18",
       "depth": 0,
