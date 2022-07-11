@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Valve.VR.Extras;
 
-public class ViveInputControl : MonoBehaviour {
 
+public class ViveInputControl : SteamVR_LaserPointer{
 
-    // Update is called once per frame
-    void Update()
+    public override void OnPointerClick(PointerEventArgs e)
     {
+        base.OnPointerClick(e);
 
+        Debug.Log("clicky");
+        
     }
+    
 }

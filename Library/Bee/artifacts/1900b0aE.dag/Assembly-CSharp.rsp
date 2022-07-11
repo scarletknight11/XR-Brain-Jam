@@ -395,6 +395,7 @@
 "Assets/Samples/Tobii XR SDK/3.0.1/Social/Scripts/TobiiSocialEyeData.cs"
 "Assets/Samples/Tobii XR SDK/3.0.1/UI/Scripts/UIPrinter.cs"
 "Assets/Scripts/DialogueManager.cs"
+"Assets/Scripts/Eyegazer.cs"
 "Assets/Scripts/NPC.cs"
 "Assets/Scripts/PlayerMove.cs"
 "Assets/Scripts/ViveInputControl.cs"

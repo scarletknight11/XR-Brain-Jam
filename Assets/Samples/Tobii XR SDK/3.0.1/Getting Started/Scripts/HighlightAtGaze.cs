@@ -15,31 +15,39 @@ namespace Tobii.XR.Examples.GettingStarted
         private Renderer _renderer;
         private Color _originalColor;
         private Color _targetColor;
+        public float timer = 0f;
+        public float[] timers;  
 
         //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
         public void GazeFocusChanged(bool hasFocus)
         {
-            //If this object received focus, fade the object's color to highlight color
+            for (int i = 0; i <= timers.Length; i++)
+            {
+                //If this object received focus, fade the object's color to highlight color
             if (hasFocus)
             {
                 _targetColor = highlightColor;
-            }
-            //If this object lost focus, fade the object's color to it's original color
-            else
+                timer += 1f;
+            } else if (!hasFocus && timer != 1)
             {
-                _targetColor = _originalColor;
+                    timer = 0f;
+                    timers = new float[i];
+                    Debug.Log("time: " + timers);
             }
+          }   
         }
 
-        private void Start()
+        void Start()
         {
+             timer = 0f;
             _renderer = GetComponent<Renderer>();
             _originalColor = _renderer.material.color;
             _targetColor = _originalColor;
         }
 
-        private void Update()
+        void Update()
         {
+            print(timer);
             //This lerp will fade the color of the object
             if (_renderer.material.HasProperty(_baseColor)) // new rendering pipeline (lightweight, hd, universal...)
             {
