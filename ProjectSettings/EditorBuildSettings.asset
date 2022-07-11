@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/Tobii XR SDK/3.0.1/Getting Started/Example_GettingStarted.unity
     guid: 221a337531f80eb4eb510b1cd2874c53
+  - enabled: 1
+    path: Assets/Scenes/TrainingScenario_Jamal.unity
+    guid: 7a5d182ae74f51148989218936dfefcb
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: b22e0b285904aee47bedd6838d8ee699, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b92866781145b6e49ab44665815cf480, type: 2}
