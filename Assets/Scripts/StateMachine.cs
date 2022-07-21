@@ -17,12 +17,18 @@ public class StateMachine : MonoBehaviour
     public GameObject option1Button;
     public GameObject option2Button;
     public GameObject introDescription;
+    public GameObject end;
 
     private int state;
     private bool isPlaying = false;
+    private bool isOn = false;
 
     public string[] option1Text;
     public string[] option2Text;
+
+    public GameObject eyeTrack1;
+    public GameObject eyeTrack2;
+    public GameObject eyeTrack3;
 
     void Start()
     {
@@ -39,6 +45,10 @@ public class StateMachine : MonoBehaviour
             mic.SetActive(false);
             option1Button.SetActive(false);
             option2Button.SetActive(false);
+
+            eyeTrack1.SetActive(false);
+            eyeTrack2.SetActive(false);
+            eyeTrack3.SetActive(false);
         }
         else if (state > 0 && state < jamalVoiceClipsA.Length)
         {
@@ -69,6 +79,9 @@ public class StateMachine : MonoBehaviour
             {
                 audioSource.PlayOneShot(jamalVoiceClipsA[state - 2], 1f);
                 isPlaying = false;
+                option1Button.SetActive(false);
+                option2Button.SetActive(false);
+                end.SetActive(true);
             }
         }
 
@@ -81,6 +94,13 @@ public class StateMachine : MonoBehaviour
             isPlaying = true;
             //Debug.Log(state);
         }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            isOn = !isOn;
+        }
+
+        mic.SetActive(isOn);
     }
 
     void animationTriggers()
@@ -93,21 +113,27 @@ public class StateMachine : MonoBehaviour
         {
             animator.SetBool("isTalking", false);
             animator.SetBool("isTired", true);
+            eyeTrack1.SetActive(true);
         }
         if (state == 3)
         {
             animator.SetBool("isTired", false);
             animator.SetBool("isBangingFist", true);
+            eyeTrack1.SetActive(false);
+            eyeTrack2.SetActive(true);
         }
         if (state == 4)
         {
             animator.SetBool("isBangingFist", false);
             animator.SetBool("isHandsInHead", true);
+            eyeTrack2.SetActive(false);
+            eyeTrack3.SetActive(true);
         }
         if (state == 5)
         {
             animator.SetBool("isHandsInHead", false);
             animator.SetBool("isAnguishing", true);
+            eyeTrack3.SetActive(false);
         }
         if (state == 6)
         {
